@@ -10,8 +10,6 @@ const protectRoute = async (req, res, next) => {
     if (!token) {
       return res.status(401).json({ message: "Not authorized middleware" });
     }
-    const verified = jwt.verify(token, process.env.JWT_SECRET);
-    console.log(verified);
 
     const userId = verified.userId;
     const user = await User.findById(userId);
