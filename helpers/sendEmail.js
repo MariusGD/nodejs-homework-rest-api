@@ -16,8 +16,8 @@ function sendEmailTo(username, email, message) {
   const mailOptions = {
     from: "maryus_39@yahoo.com",
     to: "gagumarius2015@gmail.com",
-    subject: "Test Email",
-    text: message || `Welcome ${username} to myApp!`,
+    subject: "Test",
+    text: message || `Welcome ${username} , to DarkSide! We have cookies!`,
   };
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
